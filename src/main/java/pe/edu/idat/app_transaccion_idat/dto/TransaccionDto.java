@@ -2,13 +2,9 @@ package pe.edu.idat.app_transaccion_idat.dto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
 @Table(name = "transaccion")
 @Entity
 public class TransaccionDto {
@@ -17,4 +13,44 @@ public class TransaccionDto {
     private Integer cuentadestinoid;
     private Double monto;
     private LocalDateTime fecha;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getCuentaorigenid() {
+        return cuentaorigenid;
+    }
+
+    public void setCuentaorigenid(Integer cuentaorigenid) {
+        this.cuentaorigenid = cuentaorigenid;
+    }
+
+    public Integer getCuentadestinoid() {
+        return cuentadestinoid;
+    }
+
+    public void setCuentadestinoid(Integer cuentadestinoid) {
+        this.cuentadestinoid = cuentadestinoid;
+    }
+
+    public Double getMonto() {
+        return monto;
+    }
+
+    public void setMonto(Double monto) {
+        this.monto = monto;
+    }
+
+    public LocalDateTime getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDateTime fecha) {
+        this.fecha = fecha;
+    }
 }
